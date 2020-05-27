@@ -8,8 +8,8 @@ if (!address) {
         if (error) {
             return console.log(error)
         }
-        location = geodata.location
-        forecast(geodata.latitude, geodata.longitude, (error, forecastdata) => {
+        const {location, latitude, longitude} = geodata
+        forecast(latitude, longitude, (error, forecastdata) => {
             if (error) {
                 return console.log(error)
             }
